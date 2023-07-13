@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * main - print the word
- * Return 0 (Success)
+ * @return 0 (Success)
  */
 int main(void)
 {
