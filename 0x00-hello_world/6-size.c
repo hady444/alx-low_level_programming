@@ -6,7 +6,7 @@
 int main(void)
 {
 	char *arr[] = {"char", "int", "long int", "long long int", "float"};
-	for (i=0,i<5;i++){
+	for (int i=0,i<5;i++){
 		printf("Size of a %s: %d byte(s)\n", (unsigned long) sizeof(%arr[i]));
 		/*printf("Size of an int: %d byte(s)\n", (unsigned long) sizeof(int));
 		printf("Size of a long int: %d byte(s)\n", (unsigned long) sizeof(long int));
