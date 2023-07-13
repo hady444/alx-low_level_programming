@@ -1,9 +1,10 @@
 #include <stdio.h>
-/* vv*/
+/**
+ * main is the function that program first look at
+ */
 
 int main(void)
 {
-	/* first c code */
 	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
 }
