@@ -5,10 +5,14 @@
  */
 int main(void)
 {
-	printf("Size of a char: %d byte(s)\n", (unsigned long) sizeof(char));
-	printf("Size of an int: %d byte(s)\n", (unsigned long) sizeof(int));
-	printf("Size of a long int: %d byte(s)\n", (unsigned long) sizeof(long int));
-	printf("Size of a long long int: %d byte(s)\n", (unsigned long) sizeof(long long int));
-	printf("Size of a float: %d byte(s)\n", (unsigned long) sizeof(float));
+	char *arr[] = {"char", "int", "long int", "long long int", "float"};
+	for (i=0,i<5;i++){
+		printf("Size of a %s: %d byte(s)\n", (unsigned long) sizeof(%arr[i]));
+		/*printf("Size of an int: %d byte(s)\n", (unsigned long) sizeof(int));
+		printf("Size of a long int: %d byte(s)\n", (unsigned long) sizeof(long int));
+		printf("Size of a long long int: %d byte(s)\n", (unsigned long) sizeof(long long int));
+		printf("Size of a float: %d byte(s)\n", (unsigned long) sizeof(float));
+		*/
+	}
 	return (0);
 }
