@@ -1,26 +1,34 @@
 #include <stdio.h>
 #include <time.h>
-/*
- * main - print size of
- * Return: 0 (Success)
+
+/**
+ * main - prints whether a random integer is positive, negative, or zero
+ *
+ * Description: This function generates a random integer between
+ * -RAND_MAX/2 and RAND_MAX/2
+ * and prints whether it is positive, negative, or zero.
+ *
+ * Return: Always 0 (Success)
 */
 int main(void)
 {
-        int n;
+	int n;
 
-        srand(time(0));
-        n = rand() - RAND_MAX / 2;
-        if (n > 0)
-        {
-                printf("is positive");
-        }
-        else if (n == 0)
-        {
-                printf("is zero");
-        }
-        else
-        {
-                printf("is negative")
-        }
-        return (0);
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+
+	if (n > 0)
+	{
+		printf("%i is positive\n", n);
+	}
+	else if (n == 0)
+	{
+		printf("%i is zero\n", n);
+	}
+	else
+	{
+		printf("%i is negative\n", n);
+	}
+
+	return (0);
 }
