@@ -16,6 +16,7 @@ int main(void)
 		if (alpha == 'z')
 		{
 			alpha = 'A';
+			continue;
 		}
 		alpha++;
 	}
