@@ -9,14 +9,13 @@
 int main(void)
 {
 	int n = 48;
+	char alpha = 'a';
 
 	while (n < 58)
 	{
 		putchar(n);
 		n++;
 	}
-	char alpha = 'a';
-
 	while (alpha <= 'f')
 	{
 		putchar(alpha);
