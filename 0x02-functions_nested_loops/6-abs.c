@@ -8,8 +8,7 @@
 int _abs(int)
 {
 	if (int < 0)
-		printf("%d",int * -1);
+		return (-int);
 	else
-		printf("%d",int);
-	return (0);
+		return (int);
 }
