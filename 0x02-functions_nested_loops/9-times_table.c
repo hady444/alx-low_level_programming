@@ -1,4 +1,4 @@
-#include "main"
+#include "main.h"
 /**
  * times_table - fkmsf
  * Description: mklmfs
@@ -11,7 +11,7 @@ void times_table(void)
 	for (i = 0 ; i < 10 ; i++)
 	{
 		for (j = 0 ; j < 9 ; j++)
-			printf("%d, ", i*j);
-		printf("%d\n", i*9);
+			printf("%d, ", i * j);
+		printf("%d\n", i * 9);
 	}
 }
