@@ -1,11 +1,16 @@
 #include "main.h"
 /**
- * main - fgf
- * Description: gkfg
- * Return: 0 Success
+ * print_alphabet - print all alphabets
+ * Description: all lowercase
+ *
+ * Return: void no value returned
 */
-int main(void)
+
+void print_alphabet(void)
 {
-	print_alphabet();
-	return (0);
+	char i = 'a';
+
+	while (i <= 'z')
+		putchar(i);
+	putchar('\n');
 }
