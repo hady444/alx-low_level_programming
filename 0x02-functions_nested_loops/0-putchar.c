@@ -1,12 +1,18 @@
-#include <main.h>
-#include <stdio>
+#include "main.h"
 /**
  * main - dc
  * Description: fd
+ *
  * Return: 0 Success
 */
-main()
+int main(void)
 {
-	printf("_putchar\n");
+	char str[] = "_putchar";
+	int ch;
+
+	for (ch = 0; ch < 8; ch++)
+		_putchar(str[ch]);
+	_putchar('\n');
+
 	return (0);
 }
