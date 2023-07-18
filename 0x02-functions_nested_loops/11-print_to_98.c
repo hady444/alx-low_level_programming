@@ -16,14 +16,17 @@ void print_to_98(int n)
 				printf("%d,", n);
 			else
 				printf(" %d,", n);
+		printf(" %d", 98);
+	}
+	else if (n > 98)
+        {
+		for (n = start ; n > 98 ; n--)
+			if (n == start)
+				printf("%d,", n);
+			else
+				printf(" %d,", n);
+		printf(" %d", 98);
 	}
 	else
-        {
-                for (n = start ; n > 98 ; n--)
-                        if (n == start)
-                                printf("%d,", n);
-                        else
-                                printf(" %d,", n);
-        }
-	printf(" %d",98);
+		printf("%d", 98);
 }
