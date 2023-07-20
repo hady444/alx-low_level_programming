@@ -20,18 +20,18 @@ void more_numbers(void)
 			if (j <= '9')
 			{
 				_putchar(j);
-				j++
+				j++;
 				if ((flag == false) && (j == '5'))
 					break;
 			}
 			if (j > '9')
 			{
 				flag = false;
-				j = 0
+				j = 0;
 			}
 
 		}
 		_putchar('\n');
-		j = 0
+		j = 0;
 	}
 }
