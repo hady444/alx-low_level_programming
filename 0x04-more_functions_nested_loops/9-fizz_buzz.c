@@ -1,10 +1,10 @@
-#include "main.h"
+#include <stdio>
 /**
- * fizz_buzz - fdsg
+ * main - fdsg
  * Return:void
  *
  */
-void fizz_buzz(void)
+int main(void)
 {
 	int i;
 
