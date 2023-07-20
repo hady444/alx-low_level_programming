@@ -11,7 +11,8 @@ void print_most_numbers(void)
 
 	while (i <= '9')
 	{
-		if i == '4' || i == '2'{
+		if ((i == '4') || (i == '2'))
+		{
 			i++;
 			continue
 		}
