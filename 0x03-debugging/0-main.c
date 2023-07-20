@@ -1,13 +1,10 @@
 #include "main.h"
+
 /**
- * main - prints whether a random integer is positive, negative, or zero
- *
- * Description: This function generates a random integer between
- * -RAND_MAX/2 and RAND_MAX/2
- * and prints whether it is positive, negative, or zero.
- *
- * Return: Always 0 (Success)
+* main - tests function that prints if integer is positive or negative
+* Return: 0
 */
+
 int main(void)
 {
 	int i;
