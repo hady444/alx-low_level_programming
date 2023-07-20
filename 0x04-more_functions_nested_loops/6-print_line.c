@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- *
- *
- *
+ * print_line - fg
+ * @n: fgg
+ * Return: dsf
 */
 void print_line(int n)
 {
