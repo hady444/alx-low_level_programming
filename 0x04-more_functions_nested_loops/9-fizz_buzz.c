@@ -6,6 +6,8 @@
  */
 void fizz_buzz(void)
 {
+	int i;
+
 	printf("1");
 	for (i = 2 ; i <= 100 ; i++)
 	{
@@ -16,6 +18,6 @@ void fizz_buzz(void)
 		else if (i % 5 == 0)
 			printf(" Buzz");
 		else
-		       printf(" %d", i)	
+		       printf(" %d", i);	
 	}
 }
