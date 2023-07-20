@@ -9,7 +9,7 @@ void more_numbers(void)
 {
 	int i;
 	char j = '0';
-	flag = true;
+	bool flag = true;
 
 	for (i = 0 ; i < 10 ; i++)
 	{
@@ -21,7 +21,7 @@ void more_numbers(void)
 			{
 				_putchar(j);
 				j++
-				if ((flag == false) && (j=='5'))
+				if ((flag == false) && (j == '5'))
 					break;
 			}
 			if (j > '9')
