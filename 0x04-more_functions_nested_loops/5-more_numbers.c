@@ -9,13 +9,27 @@ void more_numbers(void)
 {
 	int i;
 	char j = '0';
+	flag = true;
 
 	for (i = 0 ; i < 10 ; i++)
 	{
 		while (true)
 		{
+			if (flag == false)
+				_putchar(1);
 			if (j <= '9')
+			{
 				_putchar(j);
+				j++
+				if ((flag == false) && (j=='5'))
+					break;
+			}
+			if (j > '9')
+			{
+				flag = false;
+				j = 0
+			}
+
 		}
 		_putchar('\n');
 		j = 0
