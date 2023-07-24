@@ -1,8 +1,8 @@
 #include "main.h"
 /**
  * swap_int - ,lfg
- * @a: dgf
- * @b: fggf
+ * @str: dgf
+ * 
  */
 void puts_half(char *str)
 {
