@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_rev - ,lfg
+ * rev_string - ,lfg
  * @s: dgf
  *
  */
@@ -8,7 +8,9 @@ void rev_string(char *s)
 {
 	int len = strlen(s);
 	int i;
+	char *o;
 
 	for (i = (len - 1) ; i >= 0 ; i--)
-		_putchar(s[i]);
+		o.strcat((s[i]));
+	*s = *o;
 }
