@@ -10,6 +10,6 @@ void print_rev(char *s)
 	int i;
 
 	for (i = len ; i >= 0 ; i--)
-	       printf("%c", *(s+i));
-	printf('\n');	
+	       putchar("%c", *(s+i));
+	putchar('\n');	
 }
