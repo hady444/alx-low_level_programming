@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * swap_int - ,lfg
- * @: dgf
+ * @a: dgf
  * @b: fggf
  */
 void swap_int(int *a, int *b)
