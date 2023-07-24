@@ -11,7 +11,7 @@ int _strlen(char *s)
 
 	while (true)
 	{
-		if (s[i] == '\0')
+		if (*(s+i) == '\0')
 			return (++i);
 		i++;
 	}
