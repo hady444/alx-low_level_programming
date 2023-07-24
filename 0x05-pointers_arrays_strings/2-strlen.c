@@ -2,7 +2,7 @@
 /**
  * _strlen - ,lfg
  * @s: dgf
- *
+ * Return: kmkfc
  */
 
 int _strlen(char *s)
@@ -11,7 +11,7 @@ int _strlen(char *s)
 
 	while (1)
 	{
-		if (*(s+i) == '\0')
+		if (*(s + i) == '\0')
 			return (i);
 		i++;
 	}
