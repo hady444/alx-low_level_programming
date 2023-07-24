@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * reset_to_98 - ,lfg
+ * print_rev - ,lfg
  * @s: dgf
  *
  */
@@ -11,5 +11,5 @@ void print_rev(char *s)
 
 	for (i = (len - 1) ; i >= 0 ; i--)
 		_putchar(s[i]);
-	_putchar('\n');	
+	_putchar('\n');
 }
