@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * puts2 - ,lfg
+ *  print_array - ,lfg
  * @a:fdkf 
  * @n: kfmsv
  */
