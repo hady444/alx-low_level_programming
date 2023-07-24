@@ -11,6 +11,6 @@ void rev_string(char *s)
 	char *o;
 
 	for (i = (len - 1) ; i >= 0 ; i--)
-		o.strcat((s[i]));
+		strcat((s[i]),o);
 	*s = *o;
 }
