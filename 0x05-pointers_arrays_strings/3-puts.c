@@ -6,5 +6,5 @@
  */
 void _puts(char *str)
 {
-	sprintf(*str, "\n");
+	printf("%s\n", *str);
 }
