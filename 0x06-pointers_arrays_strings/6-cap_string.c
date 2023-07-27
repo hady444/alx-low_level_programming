@@ -9,16 +9,18 @@ char *cap_string(char *str)
 {
 	int i = 0;
 	int j;
-	char del[] = \
-	{',', ';', '.', '!', '?', '"', '(', ')', '{', '}', ' ', '\n', 't'};
+	char del[] = {',', ';', '.',
+		'!', '?', '"', '(',
+		')', '{', '}', ' ',
+		'\n', 't'};
 
 	while (str[i] != '\0')
 	{
-		if ((i == 0) && (str[i] >= 'a' && str[i] <= 'z'))
-				{
-					str[i] = str[i] - ('a' - 'A');
-					continue;
-				}
+		if ((i == 0) && ((str[i] >= 'a') && (str[i] <= 'z')))
+		{
+			str[i] = str[i] - ('a' - 'A');
+			continue;
+		}
 		for (j = 0 ; j < sizeof(del) ; j++)
 		{
 			if (str[i] == del[j])
