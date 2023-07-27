@@ -7,40 +7,21 @@
 char *leet(char *str)
 {
 	int i = 0;
+	int j;
+	char keys[] = "AEOTL";
+	int values[] = {4, 3, 0, 7, 1};
 
 	while (str[i] != '\0')
 	{
-		if (str[i] == 'a' || str[i] == 'A')
+		for (j = 0 ; keys[j] != '\0' ; j++)
 		{
-			str[i] = '4';
-			i++;
-			continue;
+			if (str[i] == keys[j] || str[i] == keys[j] + 32)
+			{
+				str[i] = 48 + values[j];
+				break;
+			}
 		}
-		if (str[i] == 'e' || str[i] == 'E')
-		{
-			str[i] = '3';
-			i++;
-			continue;
-		}
-		if (str[i] == 'o' || str[i] == 'O')
-		{
-			str[i] = '0';
-			i++;
-			continue;
-		}
-		if (str[i] == 't' || str[i] == 'T')
-		{
-			str[i] = '7';
-			i++;
-			continue;
-		}
-		if (str[i] == 'l' || str[i] == 'L')
-		{
-			str[i] = '1';
-			i++;
-			continue;
-		}
-
+		i++;
 	}
 	return (str);
 }
