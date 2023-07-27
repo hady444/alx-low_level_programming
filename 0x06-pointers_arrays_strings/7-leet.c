@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- *leet - f,dlf
+ * leet - f,dlf
  * @str: fgfg
  * Return: gfg
  */
@@ -40,6 +40,7 @@ char *leet(char *str)
 			i++;
 			continue;
 		}
+
 	}
 	return (str);
 }
