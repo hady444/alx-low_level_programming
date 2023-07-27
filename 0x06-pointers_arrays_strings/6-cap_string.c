@@ -11,7 +11,7 @@ char *cap_string(char *str);
 	int j;
 	char del[] = {',', ';', '.', '!', '?', '"', '(', ')', '{', '}', ' ', '\n'};
 
-	while (str[i] != '\0')i
+	while (str[i] != '\0')
 	{
 		for (j = 0 ; j < 12 ; j++)
 		{
