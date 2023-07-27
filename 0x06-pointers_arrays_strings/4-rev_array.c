@@ -6,9 +6,12 @@
  */
 void reverse_array(int *a, int n)
 {
-	int i;
+	int i, j ,t;
 
-	for (i = (n - 1) ; i > 0 ; i--)
-		printf("%d, ", a[i]);
-	printf("%d", a[0]);
+	for (i = (n - 1), j = 0 ; i > j ; i--, j++)
+	{
+		t = a[i];
+		a[i] = a[j];
+		a[j] = t;
+	}
 }
