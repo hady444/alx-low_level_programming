@@ -11,7 +11,7 @@ char *cap_string(char *str);
 	int j;
 	char del[] = {',', ';', '.', '!', '?', '"', '(', ')', '{', '}', ' ', '\n'};
 
-	while (str[i + 1] != '\0')i
+	while (str[i] != '\0')i
 	{
 		for (j = 0 ; j < 12 ; j++)
 		{
@@ -19,7 +19,7 @@ char *cap_string(char *str);
 			{
 				if (str[i + 1] >= 'a' && str[i + 1] <= 'z')
 				{
-					str[i] = str[i] - ('a' - 'A');
+					str[i + 1] = str[i + 1] - ('a' - 'A');
 				}
 				break;
 			}
