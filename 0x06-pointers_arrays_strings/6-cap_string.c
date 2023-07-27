@@ -5,7 +5,7 @@
  * Return: fdf
  *
  */
-char *cap_string(char *str);
+char *cap_string(char *str)
 {
 	int i = 0;
 	int j;
