@@ -18,7 +18,7 @@ char *cap_string(char *str)
 			str[i] = str[i] - ('a' - 'A');
 			continue;
 		}
-		for (j = 0 ; j < sizeof(del) ; j++)
+		for (j = 0 ; j < 14 ; j++)
 		{
 			if (str[i] == del[j])
 			{
