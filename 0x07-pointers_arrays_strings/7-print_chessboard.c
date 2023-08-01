@@ -7,12 +7,11 @@
 void print_chessboard(char (*a)[8])
 {
 	int i, j;
-	int size1d =  sizeof(a) / sizeof(a[0]);
-	int size2d =  sizeof(a[0]) / sizeof(a[0][0]);
 
-	for (i = 0; i < size1d; i++)
+	for (i = 0; i < 8; i++)
 	{
-		for (j = 0; j < size2d; j++)
+		for (j = 0; j < 8; j++)
 			_putchar(a[i][j])
 	}
+	_putchar('\n');
 
