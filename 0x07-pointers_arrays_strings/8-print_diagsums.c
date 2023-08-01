@@ -6,7 +6,7 @@
  */
 void print_diagsums(int *a, int size)
 {
-	int i, j;
+	int i;
 	int s1 = 0;
 	int s2 = 0;
 
@@ -16,5 +16,5 @@ void print_diagsums(int *a, int size)
 		s2 += a[(size - i - 1)];
 		a += size; 
 	}
-	printf("%d, %d", s1, s2);
+	printf("%d, %d\n", s1, s2);
 }
