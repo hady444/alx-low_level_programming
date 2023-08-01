@@ -7,13 +7,14 @@
 void print_diagsums(int *a, int size);
 {
 	int i, j;
+	int s1 = 0;
+	int s2 = 0;
 
 	for (i = 0; i < size; i++)
 	{
-		_putchar(a[i][i]);
+		s1 + = a[i][i];
 	}
-	_putchar(',');
-	_putchar(' ');
-	for (i = size - 1, j = 0; i < size; i--, j++)
-		_putchar(a[i][j]);
+	for (i = (size - 1), j = 0; j > 0; i--, j++)
+		s2 += a[i][j];
+	printf("%d, %d", s1, s2)
 }
