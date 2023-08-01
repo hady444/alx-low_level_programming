@@ -4,7 +4,7 @@
  * @a: array
  * @size: size
  */
-void print_diagsums(int *a, int size);
+void print_diagsums(int *a, int size)
 {
 	int i, j;
 	int s1 = 0;
