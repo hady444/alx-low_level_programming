@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _strchr: find first occurance of input char
+ * _strchr - find first occurance of input char
  * @s: pointer to string
  * @c: input character to be find
  * Return: first occurance index of character c
