@@ -2,7 +2,7 @@
 /**
  * _strlen_recursion - jdfmg
  * @s: fggf
- * Return: nkndfg
+ * Return: nkndfgf
  */
 int _strlen_recursion(char *s)
 {
