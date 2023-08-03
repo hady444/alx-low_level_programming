@@ -1,7 +1,8 @@
 #include "main.h"
 /**
- * _sqrt_recursion - gf,gl
- * @n: gfgfmk
+ * sqr - fgg
+ * @n: fgf
+ * @val: gfgfmk
  * Return: gfg
  */
 int sqr(int n, int val)
@@ -13,6 +14,12 @@ int sqr(int n, int val)
 	else
 		return (-1);
 }
+/**
+ * _sqrt_recursion - gf,gl
+ * sqr - fgg
+ * @n: gfgfmk
+ * Return: gfg
+ */
 int _sqrt_recursion(int n)
 {
 	return (sqr(n, 0));
