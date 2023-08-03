@@ -4,6 +4,7 @@
  *@n: gfg
  * Return: fgfg
  */
+int check_prime(int n, int np);
 int is_prime_number(int n)
 {
 	return (check_prime(n, 1));
