@@ -1,18 +1,12 @@
 #include "main.h"
+#include <unistd.h>
 /**
- * main - dc
- * Description: fd
+ * _putchar - write char to stdout
+ * @c: The character to print
  *
- * Return: 0 Success
+ * Return: On success 1, -1 is returned, and errno is set appropr
 */
-int main(void)
+int _putchar(char c)
 {
-	char str[] = "_putchar";
-	int ch;
-
-	for (ch = 0; ch < 8; ch++)
-		_putchar(str[ch]);
-	_putchar('\n');
-
-	return (0);
+	return (write(1, &c, 1));
 }
