@@ -1,25 +1,26 @@
-#include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
-
 /**
- * main - multiply 2 numbers passed to main, or Error
- * @argc: argument count
- * @argv: argument vector
- * Return: 1 if error, 0 if function runs correctly
+ * main - Program that multiplies two numbers.
+ * @argc: This is the argument count
+ * @argv: This is the argument vector
+ *
+ * Return: 0;
  */
-
 int main(int argc, char *argv[])
 {
-	(void) argc;
+	int index, multiplication;
 
-	if (argv[1] && argv[2])
+	multiplication = 1;
+	if (argc < 3)
 	{
-		printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
-		return (0);
-	}
-	else
 		printf("Error\n");
-
-	return (1);
+		return (1);
+	}
+	for (index = 1; index < argc; index++)
+	{
+		multiplication = multiplication * atoi(argv[index]);
+	}
+	printf("%d\n", multiplication);
+	return (0);
 }

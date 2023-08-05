@@ -1,21 +1,20 @@
-#include "holberton.h"
 #include <stdio.h>
-
 /**
- * main - print all arguments it receives
- * @argc: argument count
- * @argv: argument vector, array of strings
- * Return: 0
+ * main - Write a program that prints all arguments it receives
+ *        All arguments should be printed, including the first on
+ *
+ * @argc: This is the argument count
+ * @argv: This is the argument vector
+ *
+ * Return: 0;
  */
-
 int main(int argc, char *argv[])
 {
-	int i;
+	int count;
 
-	for (i = 0; i < argc; i++)
+	for (count = 0; count < argc; count++)
 	{
-		printf("%s\n", argv[i]);
+		printf("%s\n", argv[count]);
 	}
-
 	return (0);
 }

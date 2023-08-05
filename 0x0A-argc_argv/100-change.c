@@ -1,52 +1,48 @@
-#include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
 
 /**
- * main - print the min number of coins to make change for an amount of money
- * @argc: argument count
- * @argv: argument vector, array of strings
- * Return: 1 if error, 0 otherwise
+ * main - Prints coints left
+ * @args: Paramater Entry
+ * @argv: One number of argumets
+ * Return: zero onOne number of argumetsr
  */
 
-int main(int argc, char *argv[])
+int main(int args, char *argv[])
 {
-	int total, count;
-	unsigned int i;
-	char *p;
-	int cents[] = {25, 10, 5, 2};
+	int  c, coins = 0;
 
-	if (argc != 2)
+	if (args != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-
-	total = strtol(argv[1], &p, 10);
-	count = 0;
-
-	if (!*p)
+	c = atoi(argv[1]);
+	if (c < 0)
 	{
-		while (total > 1)
-		{
-			for (i = 0; i < sizeof(cents[i]); i++)
-			{
-				if (total >= cents[i])
-				{
-					count += total / cents[i];
-					total = total % cents[i];
-				}
-			}
-		}
-		if (total == 1)
-			count++;
+		printf("0\n");
+		return (0);
 	}
-	else
+	for (; c >= 0;)
 	{
-		printf("Error\n");
-		return (1);
-	}
+		if (c >= 25)
+			c -= 25;
 
-	printf("%d\n", count);
+		else if (c >= 10)
+			c -= 10;
+
+		else if (c >= 5)
+			c -= 5;
+
+		else if (c >= 2)
+			c -= 2;
+
+		else if (c >= 1)
+			c -= 1;
+		else
+			break;
+		coins += 1;
+	}
+	printf("%d\n", coins);
 	return (0);
 }
