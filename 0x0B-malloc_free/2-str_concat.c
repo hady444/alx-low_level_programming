@@ -5,7 +5,7 @@
  * @s2: fkgf
  * Return: pointer
  */
-char *str_concat(char *s1, char *s2);
+char *str_concat(char *s1, char *s2)
 {
 	char *s = NULL;
 	int i;
