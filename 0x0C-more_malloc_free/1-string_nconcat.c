@@ -5,7 +5,7 @@
  * @b: nd
  * Return: minimum
  */
-int _min(int a, int b)
+int _min(unsigned int a, unsigned int b)
 {
 	if (a > b)
 		return (b);
@@ -23,8 +23,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n);
 	char *s = NULL;
 	int i;
 	int j;
-	int i1;
-	int j1;
+	unsigned int i1;
+	unsigned int j1;
 
 	i = 0;
 	i1 = 0;
