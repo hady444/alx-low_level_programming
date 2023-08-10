@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _str_concat - fg
+ * str_concat - fg
  * @s1: fgh
  * @s2: fkgf
  * Return: pointer
