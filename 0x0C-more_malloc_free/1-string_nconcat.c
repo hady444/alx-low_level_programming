@@ -18,7 +18,7 @@ int _min(unsigned int a, unsigned int b)
  * @n: max length
  * Return: pointer
  */
-char *string_nconcat(char *s1, char *s2, unsigned int n);
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *s = NULL;
 	unsigned int i;
