@@ -21,8 +21,8 @@ int _min(unsigned int a, unsigned int b)
 char *string_nconcat(char *s1, char *s2, unsigned int n);
 {
 	char *s = NULL;
-	int i;
-	int j;
+	unsigned int i;
+	unsinged int j;
 	unsigned int i1;
 	unsigned int j1;
 
