@@ -17,16 +17,14 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 	i = 0;
 	i1 = 0;
-	if (s1 != NULL)
-	{
-		while (s1[i] != '\0')
-			i++;
-	}
-	if (s2 != NULL)
-	{
-		while (s2[i1] != '\0' || s2 != NULL)
-			i1++;
-	}
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+	while (s1[i] != '\0')
+		i++;
+	while (s2[i1] != '\0' || s2 != NULL)
+		i1++;
 	s = malloc((i + i1) * sizeof(char) + 1);
 	if (s == NULL)
 		return (NULL);
