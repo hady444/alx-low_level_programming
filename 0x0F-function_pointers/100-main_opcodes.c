@@ -1,9 +1,12 @@
 #include "function_pointers.h"
 /**
- *
- *
- *
- */
+ * main- Entry point
+(* a blank line
+ *@argc: the number of parameters.
+ *@argv: the parameeters in the case the number ob bytes.
+* Description: this program prints opcodes in hexa)?
+* Return: 0 in succes
+*/
 int main(int argc, char *argv[])
 {
 	int bytes = atoi(argv[1]), i;
