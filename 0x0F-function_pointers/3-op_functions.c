@@ -43,7 +43,7 @@ int op_div(int a, int b)
 		exit(100);
 	}
 	return (a / b);
-}	
+}
 /**
  * op_mod - modulo
  * @a: first number

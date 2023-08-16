@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "3-calc.h"
-int main(int argc,char *argv[])
+int main(int argc, char *argv[])
 {
 	int n1 = atoi(argv[1]), n2 = atoi(argv[3]), result;
 	int (*x)(int, int);
+
 	if (argc != 4)
 	{
 		printf("Error\n");
