@@ -1,29 +1,26 @@
-section .data
-    message db 'Hello, Holberton', 0
-    format db '%s', 0
-    newline db 10, 0
+; File: 101-hello_holberton.asm
+; Auth: Brennan D Baraban
+; Desc: 64-bit assembly program that prints
+;       Hello, Holberton followed by a new line.
+
+extern printf
 
 section .text
-    extern printf
+   global main
 
-global main
 main:
-    ; Push the format string onto the stack
-    push format
-    ; Push the message onto the stack
-    push message
-    ; Call printf
-    call printf
-    ; Clean up the stack
-    add rsp, 16
+   push rbp
 
-    ; Push the newline string onto the stack
-    push newline
-    ; Call printf
-    call printf
-    ; Clean up the stack
-    add rsp, 8
+   mov rdi,fmt
+   mov rsi,msg
+   mov rax,0
+   call printf
 
-    ; Exit the program
-    mov eax, 0
-    ret
+   pop rbp
+
+   mov rax,0
+   ret
+
+section .data
+   msg: db "Hello, Holberton", 0
+   fmt: db "%s", 10, 0
