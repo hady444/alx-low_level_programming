@@ -3,7 +3,7 @@
 /**
  * add_node - add node in head position
  * @head: pointer to pointer to the value contining the list head address
- * @str: is a string to be given to new node which would be allocated in head position
+ * @str: is a string given to new which would be allocated in head position
  * Return: addess of new head (NULL if failed)
  */
 list_t *add_node(list_t **head, const char *str)
@@ -21,7 +21,7 @@ list_t *add_node(list_t **head, const char *str)
 	}
 	new->str = s;
 	new->len = strlen(s);
-       	new->next = *head;
+	new->next = *head;
 	*head = new;
 	return (new);
 }
