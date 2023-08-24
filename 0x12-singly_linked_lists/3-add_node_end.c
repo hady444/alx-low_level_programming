@@ -6,7 +6,7 @@
  * @str: is a string given to new which would be allocated in head position
  * Return: addess of new head (NULL if failed)
  */
-list_t *add_node_end(list_t **head, const char *str);
+list_t *add_node_end(list_t **head, const char *str)
 {
 	char *s = strdup(str);
 	list_t *new, *last;
@@ -22,7 +22,7 @@ list_t *add_node_end(list_t **head, const char *str);
 	new->str = s;
 	new->len = strlen(s);
 	new->next = NULL;
-	if (!head)
+	if (!*head)
 		*head = new;
 	else
 	{
