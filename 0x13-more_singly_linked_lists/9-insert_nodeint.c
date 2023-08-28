@@ -20,17 +20,17 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	new->next = NULL;
 	i = 0;
 	travers = *head;
-	while (travers)
+	while (i < idx)
 	{
-		if (i == idx)
+		if (!travers)
 		{
-			ptr = travers->next;
-			travers->next = new;
-			new->next = ptr;
-			return (new);
+			return (NULL);
 		}
 		travers = travers->next;
 		i++;
 	}
-	return (NULL);
+	ptr = travers->next;
+	travers->next = new;
+	new->next = ptr;
+	return (new);
 }
