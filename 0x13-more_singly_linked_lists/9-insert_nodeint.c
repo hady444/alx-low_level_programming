@@ -27,9 +27,9 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	}
 	i = 0;
 	travers = *head;
-	while (i < idx)
+	while (i < (idx - 1))
 	{
-		if (!travers)
+		if (!travers || !travers->next)
 		{
 			return (NULL);
 		}
