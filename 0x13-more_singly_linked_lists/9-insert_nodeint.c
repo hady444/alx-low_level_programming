@@ -11,19 +11,21 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	listint_t *new;
 	unsigned int i;
-	listint_t *ptr, *travers;
+	listint_t *travers;
 
 	new = malloc(sizeof(listint_t));
 	if (!new)
 		return (NULL);
 	new->n = n;
 	new->next = NULL;
-	i = 0;
+
 	if (!(*head))
 	{
 		*head = new;
 		return (new);
 	}
+
+	i = 0;
 	travers = *head;
 	while (i < idx)
 	{
@@ -34,8 +36,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		travers = travers->next;
 		i++;
 	}
-	ptr = travers->next;
+	new->next = travers->next;
 	travers->next = new;
-	new->next = ptr;
 	return (new);
 }
