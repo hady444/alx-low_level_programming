@@ -24,7 +24,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	}
 	i = 0;
 	travers = *head;
-	while (i < (index-1))
+	while (i < (index - 1))
 	{
 		if (!travers->next)
 			return (-1);
