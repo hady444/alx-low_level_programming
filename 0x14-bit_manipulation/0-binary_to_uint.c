@@ -38,7 +38,7 @@ unsigned int binary_to_uint(const char *b)
 /**
  * power - T calculation of power
  * @u: number passed
- * 
+ *
  * @power: power base try
  *
  * Return: output
