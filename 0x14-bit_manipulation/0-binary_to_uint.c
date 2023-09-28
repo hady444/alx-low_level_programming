@@ -1,39 +1,50 @@
 #include "main.h"
 #include <string.h>
+#include <ctype.h>
+int power(unsigned int x, int power);
 /**
- * binary_to_uint - converts a binary number to an unsigned int.
- * @b: pointing to a string of 0 and 1 chars
- * Return: the converted number, or 0
+ * binary_to_uint - convert binary to int
+ *
+ * @b: binary number
+ * 
+ * Return: converted outu
  */
 unsigned int binary_to_uint(const char *b)
 {
-	int i = strlen(b) - 1, count = 0, x, incrementor = 1;
-	unsigned int sum = 0;
+	unsigned int nmbr = 0;
+	int i = 0, l;
 
 	if (!b)
 		return (0);
+	while (b[i] != '\0')
+		i++;
+	l = i - 1;
 
-	for (; i > -1; i--)
+	i = 0;
+	while (l >= 0)
 	{
-		if (b[i] != '0' && b[i] != '1')
+		if (b[l] != '0' && b[l] != '1')
 			return (0);
-		if (b[i] == '1')
-		{
-			if (count == 0)
-			{
-				sum += 1;
-				count++;
-				continue;
-			}
-			x = count;
-			do {
-				incrementor *= 2;
-				x--;
-			} while (x > 0);
-			sum += incrementor;
-			incrementor = 1;
-		}
-		count++;
+		
+		if (b[l] == '1')
+			nmbr += power(2, i);
+		l--;
+		i++;
 	}
-	return (sum);
+	return (nmbr);
+}
+/**
+ * power - T calculation of power
+ * @u: number passed
+ * @power: power base try
+ *
+ * Return: output
+ */
+int power(unsigned int u, int power)
+{
+	int i, p = 1;
+
+	for (i = 0; i < power; i++)
+		p *= u;
+	return (p);
 }
