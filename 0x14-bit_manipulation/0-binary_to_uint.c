@@ -6,7 +6,7 @@ int power(unsigned int x, int power);
  * binary_to_uint - convert binary to int
  *
  * @b: binary number
- * 
+ *
  * Return: converted outu
  */
 unsigned int binary_to_uint(const char *b)
@@ -25,10 +25,12 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if (b[l] != '0' && b[l] != '1')
 			return (0);
-		
+
+
 		if (b[l] == '1')
 			nmbr += power(2, i);
 		l--;
+
 		i++;
 	}
 	return (nmbr);
@@ -36,6 +38,7 @@ unsigned int binary_to_uint(const char *b)
 /**
  * power - T calculation of power
  * @u: number passed
+ * 
  * @power: power base try
  *
  * Return: output
