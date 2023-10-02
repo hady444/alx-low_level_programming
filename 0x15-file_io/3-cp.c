@@ -34,7 +34,7 @@ int main(int argc, char **argv)
 		exit(99);
 	}
 	w = write(fd2, content, r);
-	if (w == -1)
+	if (w < r)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
