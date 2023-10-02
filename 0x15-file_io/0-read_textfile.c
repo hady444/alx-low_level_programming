@@ -17,7 +17,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 	for (i = 0; letters > 0; i++, letters--)
 	{
-		if ((c = getc(file)) == EOF)
+		c = getc(file);
+		if (c == EOF)
 			break;
 		printf("%c", c);
 	}
