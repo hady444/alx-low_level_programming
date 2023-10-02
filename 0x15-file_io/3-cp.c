@@ -12,7 +12,7 @@ int main(int argc, char **argv)
 
 	if (argc != 3)
 	{
-		printf("Usage: cp file_from file_to\n"), exit(97);
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
 	}
 	fd1 = open(argv[1], O_RDONLY);
 	if (fd1 == -1)
