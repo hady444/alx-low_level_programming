@@ -8,7 +8,7 @@
 int main(int argc, char **argv)
 {
 	int r, w, fd1, fd2;
-	char *content;
+	char content[1024];
 
 	if (argc != 3)
 	{
@@ -21,14 +21,13 @@ int main(int argc, char **argv)
 		dprintf(fd1, "Error: Can't read from file %s", argv[1]);
 		return (98);
 	}
-	content = malloc(sizeof(char) * 1024);
 	r = read(fd1, content, 1024);
 	if (close(fd1) == -1)
 	{
 		dprintf(fd1, "Error: Can't close fd %d", fd1);
 		return (100);
 	}
-	fd2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_EXCL, 0664);
+	fd2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (fd2 == -1)
 	{
 		dprintf(fd2, "Error: Can't write to %s", argv[2]);
