@@ -7,21 +7,21 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	FILE *file = fopen(filename, "r");
-	ssize_t i;
-	char c;
+	int file = open(filename, O_RDONLY);
+	ssize_t r;
+	char *c;
 
-	if (file == NULL)
+	if (file == -1)
 	{
 		return (0);
 	}
-	for (i = 0; letters > 0; i++, letters--)
+	c = malloc(sizeof(char) * letters);
+	r = read(file, c, letters);
+	if (write(STDOUT_FILENO, c, letters) == -1)
 	{
-		c = getc(file);
-		if (c == EOF)
-			break;
-		printf("%c", c);
+		close(file);
+		return (0);
 	}
-	fclose(file);
-	return (i);
+	close(file);
+	return (r);
 }
