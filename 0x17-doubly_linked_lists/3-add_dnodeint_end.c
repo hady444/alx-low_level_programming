@@ -9,14 +9,20 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
 	dlistint_t *node, *travers;
 
+	if (head == NULL)
+		return (NULL);
 	node = malloc(sizeof(dlistint_t *));
 	node->next = NULL;
 	node->n = n;
-	travers = *head;
-	while (travers)
+	if ((*head) == NULL)
 	{
-		travers = travers->next;
+		node->prev = NULL;
+		*head = node;
+		return (*head);
 	}
+	travers = *head;
+	while (travers->next)
+		travers = travers->next;
 	node->prev = travers;
 	travers->next = node;
 	return (*head);
