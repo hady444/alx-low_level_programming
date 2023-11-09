@@ -37,8 +37,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 			tra->prev = node;
 			return (*h);
 		}
-		tra = tra->next;
-		i++;
+		tra = tra->next, i++;
 	}
 	if (i == idx)
 	{
