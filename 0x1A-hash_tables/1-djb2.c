@@ -7,8 +7,9 @@
 unsigned long int hash_djb2(const unsigned char *str)
 {
 	int i, j = 0;
-	unsigned int long hash_val = 5381;
 
+	unsigned int long hash_val;
+	hash_val = 5381;
 	while ((str[j] != '\0'))
 	{
 		i = str[j];
