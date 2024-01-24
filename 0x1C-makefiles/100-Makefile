@@ -10,7 +10,7 @@ SRC_DIR = src
 SRC = main.c school.c
 
 # Object files
-OBJ = $(SRC:.c=.o)
+OBJ = $(patsubst %.c,%.o,$(SRC))
 
 # Executable name
 NAME = school
