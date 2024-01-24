@@ -5,7 +5,7 @@
 def island_perimeter(grid):
     """
     Function to get the perimeter of the island described in grid.
-    
+
     Attributes:
         grid:  is a list of list of integers
     Return: perimeter of the island
@@ -18,4 +18,6 @@ def island_perimeter(grid):
             found += 1
         if max_rows < rr:
             max_rows = rr
+    if max_rows == 1 or found == 1:
+        return 1
     return ((max_rows + found) * 2)
