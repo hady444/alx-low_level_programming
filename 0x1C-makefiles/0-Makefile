@@ -1,2 +1,21 @@
-define all:
-	gcc main.c school.c -o school
+# Makefile for school executable
+
+# Compiler
+CC = gcc
+
+# Source files
+SRCS = main.c school.c
+
+# Executable name
+TARGET = school
+
+# Rule to build the executable
+all: $(TARGET)
+
+# Target rule to build the executable
+$(TARGET): $(SRCS)
+	$(CC) $(SRCS) -o $(TARGET)
+
+# Clean rule to remove the executable
+clean:
+	rm -f $(TARGET)
