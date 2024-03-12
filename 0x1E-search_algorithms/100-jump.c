@@ -1,5 +1,4 @@
 #include "search_algos.h"
-#include <math.h>
 size_t min(size_t a, size_t b);
 /**
  * jump_search - searches for a value in a sorted array of
