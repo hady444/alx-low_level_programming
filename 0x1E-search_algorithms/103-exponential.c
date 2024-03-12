@@ -13,31 +13,30 @@ size_t min(size_t a, size_t b)
  * exp_binary_search - searches for a value in a sorted array of integers
  *                 using the Binary search algorithm
  * @array: array of integers.
- * @size: size of array.
+ * @high: last index to search.
+ * @low: passed index from exponential search fun as the beginning of BS.
  * @value: value searched.
  * Return: index of value.
  */
-int exp_binary_search(int *array, size_t size, int value)
+int exp_binary_search(int *array, size_t high, size_t low, int value)
 {
-	size_t left = 0, right = size - 1, candidate_index;
+	size_t candidate_index;
 
-	if (!value || !array)
-		return (-1);
-
-	while (left <= right)
+	high -= 1;
+	while (low <= high)
 	{
-		candidate_index = left;
+		candidate_index = low;
 		printf("Searching in array: ");
-		for (; candidate_index < right; candidate_index++)
+		for (; candidate_index < high; candidate_index++)
 			printf("%d, ", array[candidate_index]);
-		printf("%d\n", array[right]);
-		candidate_index = left + (right - left) / 2;
+		printf("%d\n", array[high]);
+		candidate_index = low + (high - low) / 2;
 		if (value == array[candidate_index])
 			return (candidate_index);
 		else if (value > array[candidate_index])
-			left = candidate_index + 1;
+			low = candidate_index + 1;
 		else
-			right = candidate_index - 1;
+			high = candidate_index - 1;
 	}
 	return (-1);
 }
@@ -52,15 +51,13 @@ int exp_binary_search(int *array, size_t size, int value)
  */
 int exponential_search(int *array, size_t size, int value)
 {
-	size_t i, low, high;
-	int *arr, binary_out;
+	size_t low, high;
 
 	if (!array || !value)
 		return (-1);
 	if (array[0] == value)
 		return (0);
 	low = 1;
-	arr = NULL;
 	while (low < size && array[low] <= value)
 	{
 		printf("Value checked array[%ld] = [%d]\n", low, array[low]);
@@ -69,13 +66,6 @@ int exponential_search(int *array, size_t size, int value)
 
 	high = low;
 	low /= 2;
-	arr = malloc((min(high + 1, size) - low) * sizeof(int));
-	for (i = 0; low + i < min(high + 1, size); i++)
-		arr[i] = array[low + i];
 
-	binary_out = exp_binary_search(arr, i, value);
-	if (binary_out == -1)
-		return (-1);
-	else
-		return (low + binary_out);
+	return (exp_binary_search(array, min(high + 1, size), low, value));
 }
